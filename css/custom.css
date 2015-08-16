@@ -1,10 +1,12 @@
 html{
+  min-height: 100%;
   height: auto;
 }
 
 body {
+  min-height: 100%;
   height: auto;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
 
   background-image: url('../img/awe-background.jpg');
   background-repeat: no-repeat;
@@ -15,13 +17,22 @@ body {
   font-weight: 400;
   text-align: center;
 }
+
+body, p, h1, h2, h3, h4, h5, a, .button, button{
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
 p{
   margin: 30px 0 0 0;
   color: #555759;
   font-family: 'Roboto Slab', Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 30px;
 }
 
 h1{
@@ -70,10 +81,6 @@ h5{
   line-height: 42px;
 }
 
-h6{
-
-}
-
 button, .button {
   margin: 30px 0 0 0;
   padding-right: 20px;
@@ -82,7 +89,7 @@ button, .button {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
 }
 
 .red{
@@ -101,4 +108,90 @@ sup{
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+
+/* Larger than mobile */
+@media only screen and (min-width: 40.625em) {
+  p{
+    max-width: 630px;
+    margin: 30px auto 0 auto;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h1{
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  h2{
+    max-width: 460px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 38px;
+    line-height: 52px;
+    letter-spacing: 10px;
+  }
+
+  h3, h4{
+
+  }
+
+  h5{
+
+  }
+}
+
+/* Larger than iPad PORTRAIT */
+@media only screen and (min-width: 48.15em) {
+  body {
+    padding: 60px 0 0 0;
+  }
+
+  p{
+    margin: 20px auto 0 auto;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  h1{
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  h2{
+    max-width: 100%;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 9px;
+  }
+
+  h3, h4{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h5{
+    margin: 30px 0;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  button, .button {
+    margin: 20px 0 0 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 7px;
+  }
+
+  sup{
+    font-size: 13px;
+  }
+
+  .row.banner{
+    padding: 20px 0;
+    width: 480px;
+  }
 }
